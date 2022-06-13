@@ -8,9 +8,11 @@
   <div class="row">
     <% @lists.each do |list| %>
       <div class="col-md-4">
-        <div class="card-category classic">
-          <%= list.name %>
-        </div>
+        <a class="text-decoration-none" href=" <%= list_url(list) %> ">
+          <div class="card-category classic">
+            <%= list.name %>
+          </div>
+        </a>
       </div>
     <% end %>
     <div class="col-md-4">
