@@ -6,6 +6,11 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-md-12">
+      <a href=" <%= new_list_path %> " class="btn btn-success btn-lg">Create a movie list</a>
+    </div>
+  </div>
+  <div class="row">
     <% @lists.each do |list| %>
       <div class="col-md-4">
         <a class="text-decoration-none" href=" <%= list_url(list) %> ">
@@ -15,8 +20,5 @@
         </a>
       </div>
     <% end %>
-    <div class="col-md-4">
-      <a href=" <%= new_list_path %> " class="btn btn-success">Create a movie list</a>
-    </div>
   </div>
 </div>
