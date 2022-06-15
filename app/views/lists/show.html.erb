@@ -1,7 +1,7 @@
 <%= render 'partials/banner' %>
 <div class="container mt-3">
   <div class="row">
-    <%= @list.bookmarks.each do |bookmark| %>
+    <% @list.bookmarks.each do |bookmark| %>
       <div class="col-md-6">
         <div class="card" style="width: 40rem;">
           <img class="card-img-top" src=" <%= bookmark.movie.poster_url %> " alt="Movie poster">
@@ -10,6 +10,7 @@
             <p class="card-text"><%= bookmark.movie.overview %></p>
           </div>
           <div class="card-body">
+            <%= bookmark.comment %>
             <a href="#" class="card-link">delete</a>
           </div>
         </div>
