@@ -11,10 +11,8 @@
   <div class="row">
     <% @lists.each do |list| %>
       <a class="text-decoration-none" href=" <%= list_url(list) %> ">
-        <div class="col-3 mt-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>');">
-          <div class="card-category">
+        <div class="col-4 mt-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>');">
             <%= list.name %>
-          </div>
         </div>
       </a>
     <% end %>
