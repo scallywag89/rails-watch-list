@@ -1,5 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>');">
-  <div class="container">
-    <h1><%= @list.name %> Movies</h1>
+<% if @list.photo.attached? %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>');">
+    <div class="container">
+      <h1><%= @list.name %> Movies</h1>
+    </div>
   </div>
-</div>
+<% else %>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('classic.jpg');">
+    <div class="container">
+      <h1><%= @list.name %> Movies</h1>
+    </div>
+  </div>
+<% end %>
